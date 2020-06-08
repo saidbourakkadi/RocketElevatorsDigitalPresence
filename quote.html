@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Quote</title>
+    <meta name="description" content="Submission" />
+    <meta name="Author" content="Said Bourakkadi" />
+
+    <!-- mobile settings -->
+    <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
+    <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+
+    <!-- WEB FONTS : use %7C instead of | (pipe) 
+		<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600%7CRaleway:300,400,500,600,700%7CLato:300,400,400italic,600,700" rel="stylesheet" type="text/css" />
+-->
+    <!-- CORE CSS -->
+    <link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- THEME CSS -->
+    <link href="assets/css/essentials.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/layout.css" rel="stylesheet" type="text/css" />
+
+    <!-- PAGE LEVEL SCRIPTS -->
+    <link href="assets/css/header-1.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/color_scheme/darkblue.css" rel="stylesheet" type="text/css" id="color_scheme" />
+</head>
+
+<!--
+		AVAILABLE BODY CLASSES:
+
+		smoothscroll 			= create a browser smooth scroll
+		enable-animation		= enable WOW animations
+
+		bg-grey					= grey background
+		grain-grey				= grey grain background
+		grain-blue				= blue grain background
+		grain-green				= green grain background
+		grain-blue				= blue grain background
+		grain-orange			= orange grain background
+		grain-yellow			= yellow grain background
+
+		boxed 					= boxed layout
+		pattern1 ... patern11	= pattern background
+		menu-vertical-hide		= hidden, open on click
+
+		BACKGROUND IMAGE [together with .boxed class]
+		data-background="assets/images/_smarty/boxed_background/1.jpg"
+	-->
+
+<body class="smoothscroll enable-animation">
+
+    <!-- wrapper -->
+    <div id="wrapper">
+
+        <!--
+				AVAILABLE HEADER CLASSES
+
+				Default nav height: 96px
+				.header-md 		= 70px nav height
+				.header-sm 		= 60px nav height
+
+				.b-0 		= remove bottom border (only with transparent use)
+				.transparent	= transparent header
+				.translucent	= translucent header
+				.sticky			= sticky header
+				.static			= static header
+				.dark			= dark header
+				.bottom			= header on bottom
+
+				shadow-before-1 = shadow 1 header top
+				shadow-after-1 	= shadow 1 header bottom
+				shadow-before-2 = shadow 2 header top
+				shadow-after-2 	= shadow 2 header bottom
+				shadow-before-3 = shadow 3 header top
+				shadow-after-3 	= shadow 3 header bottom
+
+				.clearfix		=  for mobile menu, do not remove!
+
+				Example Usage:  class="clearfix sticky header-sm transparent b-0"
+			-->
+        <div id="header" class="navbar-toggleable-md static clearfix">
+
+            <!-- TOP NAV -->
+            <header id="topNav">
+                <div class="container">
+
+                    <!-- Mobile Menu Button -->
+                    <button class="btn btn-mobile" data-toggle="collapse" data-target=".nav-main-collapse">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <!-- Logo -->
+                    <a href="index.html" class="logo float-left">
+                        <img src="assets/images/LogoCompagnies/logo.png " alt="" />
+                    </a>
+
+                    <!--
+							Top Nav
+
+							AVAILABLE CLASSES:
+							submenu-dark = dark sub menu
+						-->
+                    <div class="navbar-collapse collapse float-right nav-main-collapse submenu-dark">
+                        <nav class="nav-main">
+
+                            <!--
+									.nav-onepage
+									 for onepage navigation links
+
+									Add .external for an external link!
+								-->
+                            <ul id="topMain" class="nav nav-pills nav-main nav-onepage">
+                                <li class="active">
+                                    <!-- HOME -->
+                                    <a href="index.html">
+                                        HOME
+                                    </a>
+                                </li>
+                                <li>
+                                    <!-- SERVICES -->
+                                    <a class="dropdown-toggle" href="#services">
+                                        SERVICES
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li class="dropdown">
+                                        <li><a class="dropdown-toggle" href="index.html#services">Overview</a></li>
+                                        <li><a class="dropdown-toggle" href="residential.html">Residential</a></li>
+                                        <li><a class="dropdown-toggle" href="corporation.html">Corporation</a></li>
+                                        <li><a class="dropdown-toggle" href="form.html">Get A quote</a></li>
+                                </li>
+                            </ul>
+                            </li>
+                            </li>
+                            <li>
+                                <!-- Archivements -->
+                                <a href="index.html#work">
+                                    PORTFOLIO
+                                </a>
+                            </li>
+                            <li>
+                                <!-- NEWS -->
+                                <a href="index.html#news">
+                                    NEWS
+                                </a>
+                            </li>
+                            <li>
+                                <!-- CLIENTS -->
+                                <a href="index.html#clients">
+                                    CLIENTS
+                                </a>
+                            </li>
+                            <li>
+                                <!-- CONTACT -->
+                                <a href="index.html#contact">
+                                    CONTACT
+                                </a>
+                            </li>
+                            </ul>
+
+                        </nav>
+                    </div>
+
+                </div>
+            </header>
+        </div>
+        <!-- /Top Nav -->
+
+        <!-- /form -->
+        <section onchange="vue_initial(this)">
+            <div>
+                <h1 class="container input-group-text-center text-center"
+                    style="background-color:#660000; color:white;">SUBMISSION</h1>
+            </div>
+            <div class="container input-group-text-center text-center"
+                style="background-color:#192f49; padding:5% ; color:white; border:1px solid black; border-radius:1%">
+
+
+
+                <div class="input-group">
+
+                    <form action="url to script node.js" method="post">
+
+                        <!-- /Part 1 -->
+                        <fieldset onchange="vue_initial(this)">
+
+                            <div class="input-group">
+
+                                <div class="input-group col-m-12 float-right">
+                                    <label class="input-group-text" for="building-types">CHOICE YOUR TYPE OF
+                                        BUILDING</label>
+                                    <select class="input-group-prepend" name="building-types" id="building-types"
+                                        onchange="vue_initial(this)"
+                                        >
+
+                                        <option value="none"></option>
+                                        <option value="0">Residential</option>
+                                        <option value="1">Commercial</option>
+                                        <option value="2">Corporate</option>
+                                        <option value="3">Hybride</option>
+                                    </select>
+                                </div>
+
+                            </div>
+
+                        </fieldset>
+
+                        
+
+                        <fieldset id="global" onchange="vue_initial(this)" >
+
+                            <div id="1" style="display: none" class="input-group">
+
+                                <div class="input-group-text float-left col-md-4">
+                                    <label  id="title_NbAppart" class="input-group-text" ></label>
+                                    <input  id="NbAppart" class="input-group-text" type="number" name="NbAppart" min="0" max="5000"
+                                        onchange="estimate()"
+                                        oninput="estimate()"
+                                        onclick="estimate()"
+                                        >
+                                </div>
+
+                                <div class="input-group-text float-left col-md-4">
+                                    <label  id="title_NbEtage" class="input-group-text"></label>
+                                    <input  id="NbEtage" class="input-group-text" type="number" name="NbEtage" min="0" max="500"
+                                        onchange="estimate()"
+                                        oninput="estimate()"
+                                        onclick="estimate()"
+                                        >
+                                </div>
+
+                                <div class="input-group-text float-left col-md-4">
+                                    <label  id="title_NbSsol" class="input-group-text"></label>
+                                    <input  id="NbSsol" class="input-group-text" type="number" name="NbSsol" min="0" max="500"
+                                        onchange="estimate()"
+                                        oninput="estimate()"
+                                        onclick="estimate()"
+                                        >
+                                </div>
+
+                            </div>
+                            
+                            <div class="input-group col-md-12">
+                                <hr />
+                            </div>
+
+                            <div class="input-group">
+
+                                <div id="2" style="display: none" class="input-group-text col-md-4 float-left">
+                                    <label  id="title_NbPlStD" class="input-group-text"></label>
+                                    <input  id="NbPlStD" class="input-group-text" type="number" name="NbPlStD" min="0" max="1500"
+                                        onchange="estimate()"
+                                        oninput="estimate()"
+                                        onclick="estimate()"
+                                        >
+                                </div>
+
+                                <div id="3" style="display: none" class="input-group-text col-md-4 float-left">
+                                    <label  id="title_NbCageDem" class="input-group-text"></label>
+                                    <input  id="NbCageDem" class="input-group-text" type="number"
+                                        id="NbCageDem" name="NbCageDem" min="0"
+                                        onchange="estimate()"
+                                        oninput="estimate()"
+                                        onclick="estimate()"
+                                        >
+                                        
+                                </div>
+                                <div id="4" style="display: none" class="input-group-text col-md-4 float-left">
+                                    <label  id="title_NbOccParEt" class="input-group-text"></label>
+                                    <input  id="NbOccParEt" class="input-group-text" type="number"
+                                        id="NbOccParEt" name="NbOccParEt" min="0" max="5000"
+                                        onchange="estimate()"
+                                        oninput="estimate()"
+                                        onclick="estimate()"
+                                        >
+                                </div>
+                            
+                                <div id="5" style="display: none" class="input-group-text col-md-4 float-left">
+                                    <label  id="title_NbHrAcMax" class="input-group-text"></label>
+                                    <input  id="NbHrAcMax" class="input-group-text" type="number"
+                                        id="NbHrAcMax" name="NbHrAcMax" min="0" max="24"
+                                        onchange="estimate()"
+                                        oninput="estimate()"
+                                        onclick="estimate()"
+                                        >
+                                </div>
+
+                            </div>
+                            <div class="input-group col-md-12">
+                                <hr />
+                            </div>
+                            <div id="6" style="display: none" class="input-group col-md-12" >
+                                <div class="input-group-text col-md-4 float-right">
+                                    <div class="input-group-text">
+                                        <span   class="" id="title_Esc_Estime"></span>
+                                    </div>
+                                    <input  type="number" id="NbrEscEstimed" class="form-control" name="NbrEscEstimed"
+                                        readonly="true"  value="0" 
+                                        onchange="estimate()"
+                                        oninput="estimate()"
+                                        onclick="estimate()">
+                                   
+
+                                </div>
+                            </div>
+
+                            <div class="hidden-lg hidden-md hidden-sm hidden-xs-down-up">
+                               
+                            </div>
+                        
+                            <fieldset>
+                                <div id="7" style="display: none" class="row">
+                                    <div class="input-group-text-center">
+                                        <h3 style="color:blanchedalmond">PRODUCT RANGE</h3>
+                                    </div>
+                                    <div class="input-group col-md-12">
+
+
+                                    <div class="input-group col-md-4 float-left">
+                                        <label class="input-group-text" for="stand-radio">Standard
+                                            <input type=radio id="stand-radio" name="radio" value="7565"
+                                            
+                                            ></label>
+                                    </div>
+
+                                    <div class="input-group col-md-4 float-left">
+                                        <label class="input-group-text" for="prem-radio">Premium
+                                            <input type=radio id="prem-radio" name="radio" value="12345"></label>
+                                    </div>
+
+                                    <div class="input-group col-md-4 float-left">
+                                        <label class="input-group-text" for="excel-radio">Excelium 
+                                            <input type="radio" id="excel-radio" name="radio" value="15400">
+                                        </label>
+                                    </div>
+                                </div>
+
+                                </div>
+
+                                <div id="8"  style="width: 90%; color:white" class="float-left col-md-12 align-self-center">
+                                    <div class="row">
+                                        <div id="title_P" class="col-md-12 align-self-center"
+                                            style="font-size:1.5em;background-color:#660000;text-align:center"></div>
+                                    </div>
+
+                                    <div class="row align-self-center text-center"
+                                        style="color:white; font-size:1.5em ;border:1px solid white;text-align:center">
+
+                                        <div id="Cost_Cages" class="col-md-4"></div>
+                                        <div id="Cost_Inst" class="col-md-4"></div>
+                                        <div id="Cost_P" class="col-md-4"></div>
+                                    </div>
+
+                                </div>
+                                <!--/Global estimate-->
+
+                            </fieldset>
+                        
+                        </fieldset>
+                    </form>
+
+
+
+
+
+                </div>
+            </div>
+
+        </section>
+
+
+</body>
+
+<!-- FOOTER -->
+<footer id="footer">
+    <div class="container">
+
+
+        <div class="row">
+
+            <!-- col #1 -->
+            <div class="col-md-8">
+
+                <h3 class="letter-spacing-1">We earn your trust every day</h3>
+
+                <!-- Small Description -->
+                <p>
+                    You can count on the large team of technicians in the elevator industry - more than 45,000 highly
+                    qualified professionals. They proudly wear the Rocket Elevator logo. Their mission is to keep your
+                    equipment in operation at the same level of performance as the day of its installation..
+                </p>
+                <h2>Tel: (438) 404 0538</h2>
+            </div>
+            <!-- /col #1 -->
+
+            <!-- col #2 -->
+            <div class="col-md-4">
+                <h3 class="letter-spacing-1">KEEP IN TOUCH</h3>
+
+                <!-- Newsletter Form -->
+                <p>Subscribe to Our Newsletter to get Important News & Offers</p>
+
+                <form class="validate" action="php/newsletter.php" method="post" data-success="Subscribed! Thank you!"
+                    data-toastr-position="bottom-right">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                        <input type="email" id="email" name="email" class="form-control required "
+                            placeholder="Enter your Email">
+                        <span class="input-group-btn">
+                            <button class="btn btn-success" type="submit">Subscribe</button>
+                        </span>
+                    </div>
+                </form>
+                <!-- /Newsletter Form -->
+
+
+            </div>
+            <!-- /col #2 -->
+
+        </div>
+
+
+    </div>
+
+    <div class="copyright">
+        <div class="container">
+            <ul class="float-right m-0 list-inline mobile-block">
+                <li>Terms &amp; Conditions</li>
+                <li>&bull;</li>
+                <li>Privacy</li>
+            </ul>
+            &copy; All Rights Reserved, Company LTD
+        </div>
+    </div>
+
+</footer>
+<!-- /FOOTER -->
+
+</div>
+<!-- /wrapper -->
+
+
+<!-- SCROLL TO TOP -->
+<a href="#" id="toTop"></a>
+
+
+<!-- PRELOADER -->
+<div id="preloader">
+    <div class="inner">
+        <span class="loader"></span>
+    </div>
+</div><!-- /PRELOADER -->
+
+
+<!-- JAVASCRIPT FILES -->
+<script>var plugin_path = 'assets/plugins/';</script>
+<script src="assets/plugins/jquery/jquery-3.3.1.min.js"></script>
+
+<script src="assets/js/scripts.js"></script>
+<script src="assets/js/quote.js"></script>
+
+</html>
