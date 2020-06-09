@@ -493,13 +493,13 @@ img.img-fluid {
 
 /** Boxed
  **************************************************************** **/
-body.boxed {
+body.wide {
 	background-color:#f1f2f7;
 }
-body.boxed section {
+body.wide section {
 	background-color:#fff;
 }
-body.boxed #wrapper {
+body.wide #wrapper {
 	max-width:1170px;
 	margin-left:auto;
 	margin-right:auto;
@@ -511,7 +511,7 @@ body.boxed #wrapper {
 			border-radius: 3px;
 }
 @media only screen and (max-width: 992px) {
-	body.boxed #wrapper {
+	body.wide #wrapper {
 		margin-top:0;
 		margin-bottom:0;
 
@@ -2995,7 +2995,7 @@ body.menu-vertical #mainMenu.sidebar-vertical .navbar-collapse>ul.nav.navbar-nav
 		border-right: rgba(255,255,255,0.1) 1px solid;
 	}
 
-	body.boxed #topBar.dark ul.top-links>li {
+	body.wide #topBar.dark ul.top-links>li {
 		border-right:0;
 	}
 	#topBar.dark .dropdown-menu {
