@@ -531,10 +531,7 @@ text-shadow:none;
 .tp-caption a {
 color:#ff7302;
 text-shadow:none;
--webkit-transition:all 0.2s ease-out;
--moz-transition:all 0.2s ease-out;
--o-transition:all 0.2s ease-out;
--ms-transition:all 0.2s ease-out;
+transition-timing-function:all 0.2s ease-out;
 }
 
 .tp-caption a:hover {
@@ -1114,14 +1111,15 @@ img.tp-slider-alternative-image	{	width:100%; height:auto;}
 
 	@media only screen and (min-width: 480px) and (max-width: 767px) {
 		.tp-simpleresponsive  .button	{	padding:4px 8px 3px; line-height:25px !important; font-size:11px !important;font-weight:normal;	}
-		.tp-simpleresponsive  a.button { -webkit-transition: none; -moz-transition: none; -o-transition: none; -ms-transition: none;	 }
+		.tp-simpleresponsive  a.button { transition-timing-function: none;	 }
 
 
 	}
 
     @media only screen and (min-width: 0px) and (max-width: 479px) {
 		.tp-simpleresponsive  .button	{	padding:2px 5px 2px; line-height:20px !important; font-size:10px !important}
-		.tp-simpleresponsive  a.button { -webkit-transition: none; -moz-transition: none; -o-transition: none; -ms-transition: none;	 }
+		.tp-simpleresponsive  a.button { transition-timing-function: none; 	 }
+		
 	}
 
 
@@ -1393,7 +1391,7 @@ img.tp-slider-alternative-image	{	width:100%; height:auto;}
 											}
 
 
-.tp-bullets.simplebullets.navbar						{ 	border:1px solid #666; border-bottom:1px solid #444; background:url(../assets/wide_bgtile.png); height:40px; padding:0px 10px; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px }
+.tp-bullets.simplebullets.navbar						{ 	border:1px solid #666; border-bottom:1px solid #444; background:url(../assets/boxed_bgtile.png); height:40px; padding:0px 10px; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px }
 
 .tp-bullets.simplebullets.navbar-old					{ 	 background:url(../assets/navigdots_bgtile.png); height:35px; padding:0px 10px; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px }
 
@@ -1416,7 +1414,7 @@ img.tp-slider-alternative-image	{	width:100%; height:auto;}
 
 
 /** navbar NAVIGATION VERSION **/
-.tp-bullets.simplebullets.navbar .bullet			{	cursor:pointer; position:relative;	background:url(../assets/wide.png) no-Repeat top left;	width:18px;	height:19px;   margin-right:5px; float:left; margin-top:0px}
+.tp-bullets.simplebullets.navbar .bullet			{	cursor:pointer; position:relative;	background:url(../assets/bullet_boxed.png) no-Repeat top left;	width:18px;	height:19px;   margin-right:5px; float:left; margin-top:0px}
 
 .tp-bullets.simplebullets.navbar .bullet.first		{	margin-left:0px !important}
 .tp-bullets.simplebullets.navbar .bullet.last		{	margin-right:0px !important}
@@ -1472,8 +1470,8 @@ img.tp-slider-alternative-image	{	width:100%; height:auto;}
 .tp-rightarrow.round-old								{	z-index:100;cursor:pointer; position:relative;	background:url(../assets/arrow_right.png) no-Repeat top left;	width:26px;	height:26px;  margin-right:0px; float:left;	margin-top:0px}
 
 
-.tp-leftarrow.navbar									{	z-index:100;cursor:pointer; position:relative;	background:url(../assets/small_left_wide.png) no-Repeat top left;	width:20px;	height:15px;   float:left;	margin-right:6px; margin-top:12px}
-.tp-rightarrow.navbar									{	z-index:100;cursor:pointer; position:relative;	background:url(../assets/small_right_wide.png) no-Repeat top left;	width:20px;	height:15px;   float:left;	margin-left:6px; margin-top:12px}
+.tp-leftarrow.navbar									{	z-index:100;cursor:pointer; position:relative;	background:url(../assets/small_left_boxed.png) no-Repeat top left;	width:20px;	height:15px;   float:left;	margin-right:6px; margin-top:12px}
+.tp-rightarrow.navbar									{	z-index:100;cursor:pointer; position:relative;	background:url(../assets/small_right_boxed.png) no-Repeat top left;	width:20px;	height:15px;   float:left;	margin-left:6px; margin-top:12px}
 
 
 .tp-leftarrow.navbar-old								{	z-index:100;cursor:pointer; position:relative;	background:url(../assets/arrowleft.png) no-Repeat top left;		width:9px;	height:16px;   float:left;	margin-right:6px; margin-top:10px}

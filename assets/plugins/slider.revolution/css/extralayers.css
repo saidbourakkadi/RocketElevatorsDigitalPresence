@@ -1341,10 +1341,10 @@ border-style:none;
 .tp-caption a {
 color:#ff7302;
 text-shadow:none;
--webkit-transition:all 0.2s ease-out;
--moz-transition:all 0.2s ease-out;
--o-transition:all 0.2s ease-out;
--ms-transition:all 0.2s ease-out;
+transition-timing-function:all 0.2s ease-out;
+
+
+
 }
 
 .tp-caption a:hover {
