@@ -1377,14 +1377,14 @@ img.tp-slider-alternative-image	{	width:100%; height:auto;}
 
 
 .tp-bullets									{	z-index:1000; position:absolute;
-												-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+												filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
 												-moz-opacity: 1;
 												-khtml-opacity: 1;
 												opacity: 1;
-												-webkit-transition: opacity 0.2s ease-out; -moz-transition: opacity 0.2s ease-out; -o-transition: opacity 0.2s ease-out; -ms-transition: opacity 0.2s ease-out;-webkit-transform: translateZ(5px);
+												transition: opacity 0.2s ease-out; -moz-transition: opacity 0.2s ease-out; -o-transition: opacity 0.2s ease-out; -ms-transition: opacity 0.2s ease-out;-webkit-transform: translateZ(5px);
 											}
 .tp-bullets.hidebullets					{
-												-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+												filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
 												-moz-opacity: 0;
 												-khtml-opacity: 0;
 												opacity: 0;
@@ -1440,20 +1440,20 @@ img.tp-slider-alternative-image	{	width:100%; height:auto;}
 /*************************************
 	-	TP ARROWS 	-
 **************************************/
-.tparrows												{	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+.tparrows												{	filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
 															-moz-opacity: 1;
 															-khtml-opacity: 1;
 															opacity: 1;
-															-webkit-transition: opacity 0.2s ease-out; -moz-transition: opacity 0.2s ease-out; -o-transition: opacity 0.2s ease-out; -ms-transition: opacity 0.2s ease-out;
-															-webkit-transform: translateZ(5000px);
-															-webkit-transform-style: flat;
-															-webkit-backface-visibility: hidden;
+															transition: opacity 0.2s ease-out; -moz-transition: opacity 0.2s ease-out; -o-transition: opacity 0.2s ease-out; -ms-transition: opacity 0.2s ease-out;
+															transform: translateZ(5000px);
+															transform-style: flat;
+															backface-visibility: hidden;
 															z-index:600;
 															position: relative;
 
 														}
 .tparrows.hidearrows									{
-															-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+															filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
 															-moz-opacity: 0;
 															-khtml-opacity: 0;
 															opacity: 0;
@@ -1533,18 +1533,18 @@ img.tp-slider-alternative-image	{	width:100%; height:auto;}
 
 .tp-bullets.tp-thumbs .bullet				{   width:100px; height:50px; 			/* THE DIMENSION OF A SINGLE THUMB */
 												cursor:pointer; overflow:hidden;background:none;margin:0;float:left;
-												-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+												filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
 												/*filter: alpha(opacity=50);	*/
-												-moz-opacity: 0.5;
+												
 												-khtml-opacity: 0.5;
 												opacity: 0.5;
 
-												-webkit-transition: all 0.2s ease-out; -moz-transition: all 0.2s ease-out; -o-transition: all 0.2s ease-out; -ms-transition: all 0.2s ease-out;
+												transition: all 0.2s ease-out; -moz-transition: all 0.2s ease-out; -o-transition: all 0.2s ease-out; -ms-transition: all 0.2s ease-out;
 											}
 
 
 .tp-bullets.tp-thumbs .bullet:hover,
-.tp-bullets.tp-thumbs .bullet.selected		{ 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+.tp-bullets.tp-thumbs .bullet.selected		{ 	filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
 
 												-moz-opacity: 1;
 												-khtml-opacity: 1;
@@ -1636,7 +1636,7 @@ img.tp-slider-alternative-image	{	width:100%; height:auto;}
 *****************************************/
 
 /* NAVIGATION PREVIEW 1 */
-.tparrows.preview1 							{	width:100px;height:100px;-webkit-transform-style: preserve-3d; -webkit-perspective: 1000; -moz-perspective: 1000; -webkit-backface-visibility: hidden; -moz-backface-visibility: hidden;background: transparent}
+.tparrows.preview1 							{	width:100px;height:100px;transform-style: preserve-3d; -webkit-perspective: 1000; -moz-perspective: 1000; -webkit-backface-visibility: hidden; -moz-backface-visibility: hidden;background: transparent}
 .tparrows.preview1:after					{	position:absolute; left:0px;top:0px; font-family: "revicons"; color:#fff; font-size:30px; width:100px;height:100px;text-align: center; background:#fff;background:rgba(0,0,0,0.15);z-index:2;line-height:100px; -webkit-transition: background 0.3s, color 0.3s; -moz-transition: background 0.3s, color 0.3s; transition: background 0.3s, color 0.3s}
 .tp-rightarrow.preview1:after				{	content: '\e825';  }
 .tp-leftarrow.preview1:after				{	content: '\e824';  }
@@ -2323,8 +2323,8 @@ img.tp-slider-alternative-image	{	width:100%; height:auto;}
 
 
 .tp-transparentimg {	content:"url(../assets/transparent.png)"}
-.tp-3d				{	-webkit-transform-style: preserve-3d;
-						 -webkit-transform-origin: 50% 50%;
+.tp-3d				{	transform-style: preserve-3d;
+						transform-origin: 50% 50%;
 					}
 
 
