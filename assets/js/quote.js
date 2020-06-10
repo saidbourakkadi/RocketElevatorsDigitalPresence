@@ -12,6 +12,7 @@ function vue_initial(e) {
         document.getElementById("6").style.display = "block";
         document.getElementById("7").style.display = "block";
         document.getElementById("8").style.display = "none";
+        document.getElementById("pu").style.display = "none";
 
         document.getElementById("stand-cost").style.display = "none";
         document.getElementById("prem-cost").style.display = "none";
@@ -40,6 +41,7 @@ function vue_initial(e) {
         document.getElementById("6").style.display = "block";
         document.getElementById("7").style.display = "block";
         document.getElementById("8").style.display = "none";
+        document.getElementById("pu").style.display = "none";
 
         document.getElementById('title_NbAppart').innerHTML = "Number of Shops";
         document.getElementById('title_NbEtage').innerHTML = "Number of Floors with basements";
@@ -65,6 +67,7 @@ function vue_initial(e) {
         document.getElementById("6").style.display = "block";
         document.getElementById("7").style.display = "block";
         document.getElementById("8").style.display = "none";
+        document.getElementById("pu").style.display = "none";
 
         document.getElementById('title_NbAppart').innerHTML = "Number of Compagny";
         document.getElementById('title_NbEtage').innerHTML = "Number of Floors with basements";
@@ -93,6 +96,7 @@ function vue_initial(e) {
         document.getElementById("6").style.display = "block";
         document.getElementById("7").style.display = "block";
         document.getElementById("8").style.display = "none";
+        document.getElementById("pu").style.display = "none";
 
         document.getElementById("stand-cost").style.display = "none";
         document.getElementById("prem-cost").style.display = "none";
@@ -193,9 +197,10 @@ function calculated(e) {
         NbEscByApparts = Math.ceil(MoyAppartByEt / 6);
         NbCol = Math.ceil(NbEtage / 20);
         NbCageEstimate = NbEscByApparts * NbCol;
-
-        document.getElementById('NbrEscEstimed').value = NbCageEstimate;
-
+        if (isNaN(NbCageEstimate) || NbCageEstimate==0){
+            document.getElementById('NbrEscEstimed').value = "";   
+        
+        }else {document.getElementById('NbrEscEstimed').value = NbCageEstimate;}
 
         /* vue d estimation escaladeur number we need */
 
@@ -204,7 +209,10 @@ function calculated(e) {
     }
     if (e == '1') {
         NbCageEstimate = NbCageDem;
-        document.getElementById('NbrEscEstimed').value = NbCageEstimate;
+        if (isNaN(NbCageEstimate) ){
+            document.getElementById('NbrEscEstimed').value = "";   
+        
+        }else {document.getElementById('NbrEscEstimed').value = NbCageEstimate;}
         /*calculated_Project(NbCageEstimate);*/
     }
     if (e == '2') {
@@ -214,7 +222,10 @@ function calculated(e) {
         NbrEscCol = Math.ceil(NbrEsc / NbCol);
         NbCageEstimate = Math.ceil(NbrEscCol * NbrEscCol);
         document.getElementById('title_Esc_Estime').innerHTML = "Number of Escalators Needed";
-        document.getElementById('NbrEscEstimed').value = NbCageEstimate;
+        if (isNaN(NbCageEstimate) ){
+            document.getElementById('NbrEscEstimed').value = "";   
+        
+        }else {document.getElementById('NbrEscEstimed').value = NbCageEstimate;}
 
     }
     if (e == '3') {
@@ -224,7 +235,10 @@ function calculated(e) {
         NbrEscCol = Math.ceil(NbrEsc / NbCol);
         NbCageEstimate = Math.ceil(NbrEscCol * NbrEscCol);
         document.getElementById('title_Esc_Estime').innerHTML = "Number of Escalators Needed";
-        document.getElementById('NbrEscEstimed').value = NbCageEstimate;
+        if (isNaN(NbCageEstimate) ){
+            document.getElementById('NbrEscEstimed').value = "";   
+        
+        }else {document.getElementById('NbrEscEstimed').value = NbCageEstimate;}
 
 
     }
@@ -259,6 +273,7 @@ document.getElementById("7").addEventListener("change", vue_Project);
 
 function vue_Project() {
     document.getElementById("8").style.display = "block";
+    document.getElementById("pu").style.display = "none";
     document.getElementById('title_P').style.display = "block";
     document.getElementById('Cost_Cages').style.display = "block";
     document.getElementById('Cost_Inst').style.display = "block";
@@ -273,12 +288,12 @@ function vue_Project() {
         CostCages = NbCageEstimate * radio[0].value;
         CostInst = CostCages * 0.1;
         CostProj = CostCages + CostInst;
-
+        document.getElementById("pu").style.display = "block";
         document.getElementById("stand-cost").style.display = "block";
         document.getElementById("prem-cost").style.display = "none";
         document.getElementById("excel-cost").style.display = "none";
 
-        document.getElementById('title_P').innerHTML = "Total cost of the project";
+        document.getElementById('title_P').innerHTML = "TOTAL PROJECT COST";
         document.getElementById('Cost_Cages').innerHTML = "Elevators  $" + CostCages.toFixed(2);
         document.getElementById('Cost_Inst').innerHTML = "Installation  $" + CostInst.toFixed(2);
         document.getElementById('Cost_P').innerHTML = "Total  $" + CostProj.toFixed(2);
@@ -287,35 +302,35 @@ function vue_Project() {
         CostCages = NbCageEstimate * radio[1].value;
         CostInst = CostCages * 0.1;
         CostProj = CostCages + CostInst;
-
+        document.getElementById("pu").style.display = "block";
         document.getElementById("stand-cost").style.display = "none";
         document.getElementById("prem-cost").style.display = "block";
         document.getElementById("excel-cost").style.display = "none";
         
 
-        document.getElementById('title_P').innerHTML = "Total cost of the project";
+        document.getElementById('title_P').innerHTML = "TOTAL PROJECT COST";
         document.getElementById('Cost_Cages').innerHTML = "Elevators  $" + CostCages.toFixed(2);
         document.getElementById('Cost_Inst').innerHTML = "Installation  $" + CostInst.toFixed(2);
-        document.getElementById('Cost_P').innerHTML = "Project  $" + CostProj.toFixed(2);
+        document.getElementById('Cost_P').innerHTML = "TOTAL  $" + CostProj.toFixed(2);
     }
-    else if (radio[2].checked && NbCageEstimate > 0) {
+    else if (radio[2].checked && NbCageEstimate > 0 ) {
         CostCages = NbCageEstimate * radio[2].value;
         CostInst = CostCages * 0.1;
         CostProj = CostCages + CostInst;
 
-       
+        document.getElementById("pu").style.display = "block";
         document.getElementById("stand-cost").style.display = "none";
         document.getElementById("prem-cost").style.display = "none";
         document.getElementById("excel-cost").style.display = "block";
         
 
-        document.getElementById('title_P').innerHTML = "ESTIMATE PROJECT";
+        document.getElementById('title_P').innerHTML = "TOTAL PROJECT COST";
         document.getElementById('Cost_Cages').innerHTML = "Elevators  $" + CostCages.toFixed(2);
         document.getElementById('Cost_Inst').innerHTML = "Installation  $" + CostInst.toFixed(2);
-        document.getElementById('Cost_P').innerHTML = "Project  $" + CostProj.toFixed(2);
+        document.getElementById('Cost_P').innerHTML = "TOTAL  $" + CostProj.toFixed(2);
     }
     else {
-        alert('Ther is no estimated so! ):');
+        alert('There is no estimated so! ):');
         document.getElementById("stand-radio").checked = false;
         document.getElementById("prem-radio").checked = false;
         document.getElementById("excel-radio").checked = false;
@@ -324,6 +339,7 @@ function vue_Project() {
         document.getElementById('Cost_Inst').innerHTML = "";
         document.getElementById('Cost_P').innerHTML = "";
         document.getElementById("8").style.display = "none";
+        document.getElementById("pu").style.display = "none";
 
         document.getElementById("stand-cost").style.display = "none";
         document.getElementById("prem-cost").style.display = "none";
