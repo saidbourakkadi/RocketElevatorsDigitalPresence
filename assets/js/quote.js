@@ -1,4 +1,5 @@
-/* vue initialised by type of building */
+/* vue initialised by type of building 
+we show what we select */
 function vue_initial(e) {
 
 
@@ -137,14 +138,30 @@ function initialised_value() {
     document.getElementById("excel-radio").checked = false;
 }
 
-/* INPUT */
-/*let NbAppart = 0; NbEtage = 0; NbSsol = 0; NbPlStD = 0; NbCageDem = 0; NbOccParEt = 0; NbHrAcMax = 0;*/
+/* -------------- INPUT --------------*/
+/* 
+   NbAppart : Nombre appartement, de shop ou entreprise
+   NbEtage  : Nombre d etage 
+   NbSsol   : Nombre de sous sol (basement)
+   NbPlStD  : Nombre de stationnement free
+   NbCageDem : nombre de cage demander
+   NbOccParEt : Nombre occupant par etage
+   NbHrAcMax = Nobre d'heure travailler par jour
+*/
 
 
-/* OUTPUT */
-/*let NbCageEstimate = 0; CostCages = 0; CostInst = 0; CostProj = 0; MoyAppartByEt = 0; NbCol = 0; NbrEscCol;*/
+/* ---------------OUTPUT -----------------*/
+/* NbCageEstimate : Nombre cage estimer
+   CostCages    : cout des cages 
+   CostInst     : cout d'installation
+   CostProj     : Cout du projet
+   MoyAppartByEt: Nombre moyen d appartement par etage
+   NbCol        :nombre de colonne
+   NbrEscCol    : nombre de sous sol
+   
+*/
 
-/* Vefify the input if is Number typeof */
+
 
 
 /* Listner de calcul de l estimation du nbre de cage et du projet */
@@ -157,8 +174,7 @@ function estimate() {
 }
 /* function of calculate how many escalador we need */
 function calculated(e) {
-    /*var NbAppart = 0; var NbEtage = 0; var NbSsol = 0; var NbPlStD = 0; var NbCageDem = 0; var NbOccParEt = 0; var NbHrAcMax = 0;*/
-    /*var NbCageEstimate = 0; var MoyAppartByEt = 0; var NbCol = 0; var NbrEscCol;*/
+    
     var NbAppart = Number(document.getElementById('NbAppart').value);
     var NbEtage = Number(document.getElementById('NbEtage').value);
     var NbSsol = Number(document.getElementById('NbSsol').value);
@@ -168,7 +184,8 @@ function calculated(e) {
     var NbHrAcMax = Number(document.getElementById('NbHrAcMax').value);
 
     var NbCageEstimate = Number(document.getElementById('NbrEscEstimed').value = 0);
-    /* testing the correct input */
+
+    /* Vefify the input if is Number and filter just we accepted */
     if (NbAppart < 0 || isNaN(parseInt(document.getElementById('NbAppart').value))) {
         document.getElementById('NbAppart').value = null;
 
@@ -191,29 +208,29 @@ function calculated(e) {
     if (NbHrAcMax < 0 || NbHrAcMax > 24 || isNaN(parseInt(document.getElementById('NbHrAcMax').value))) {
         document.getElementById('NbHrAcMax').value = null;
     }
-    /* depend type of building we applicate the differenr calcul */
+    /* depend type of building we applicate the different calcul */
     if (e == '0') {
         MoyAppartByEt = Math.ceil(NbAppart / (NbEtage - NbSsol));
         NbEscByApparts = Math.ceil(MoyAppartByEt / 6);
         NbCol = Math.ceil(NbEtage / 20);
         NbCageEstimate = NbEscByApparts * NbCol;
+
+        /* vue d estimation escaladeur number we need */
         if (isNaN(NbCageEstimate) || NbCageEstimate == 0) {
             document.getElementById('NbrEscEstimed').value = "";
 
         } else { document.getElementById('NbrEscEstimed').value = NbCageEstimate; }
-
-        /* vue d estimation escaladeur number we need */
-
-
-
+        
     }
     if (e == '1') {
         NbCageEstimate = NbCageDem;
+
+        /* vue d estimation escaladeur number we need */
         if (isNaN(NbCageEstimate)) {
             document.getElementById('NbrEscEstimed').value = "";
 
         } else { document.getElementById('NbrEscEstimed').value = NbCageEstimate; }
-        /*calculated_Project(NbCageEstimate);*/
+
     }
     if (e == '2') {
         OccTotal = NbOccParEt * (NbEtage + NbSsol);
@@ -222,6 +239,8 @@ function calculated(e) {
         NbrEscCol = Math.ceil(NbrEsc / NbCol);
         NbCageEstimate = Math.ceil(NbrEscCol * NbrEscCol);
         document.getElementById('title_Esc_Estime').innerHTML = "Number of Escalators Needed";
+
+        /* vue d estimation escaladeur number we need */
         if (isNaN(NbCageEstimate)) {
             document.getElementById('NbrEscEstimed').value = "";
 
@@ -234,6 +253,8 @@ function calculated(e) {
         NbCol = Math.round(NbEtage / 20);
         NbrEscCol = Math.ceil(NbrEsc / NbCol);
         NbCageEstimate = Math.ceil(NbrEscCol * NbrEscCol);
+
+        /* vue d estimation escaladeur number we need */
         document.getElementById('title_Esc_Estime').innerHTML = "Number of Escalators Needed";
         if (isNaN(NbCageEstimate)) {
             document.getElementById('NbrEscEstimed').value = "";
@@ -246,13 +267,7 @@ function calculated(e) {
 }
 
 
-/*
-let NbAppart=0;     NbEtage=0;  NbSsol=0;
-let NbCommerce;     NbEtage;    NbSsol;   NbPlStD=0; NbCageDem=0;
-let NbEtrLoc;       NbEtage;    NbSsol;   NbPlStD;                NbOccParEt=0;
-let NbComLoc;       NbEtage;    NbSsol;   NbPlStD;                NbOccParEt;    NbHrAcMax=0;
-
-*/
+/* -- Initialised show costs */
 function initialised_Cost() {
     document.getElementById('title_P').innerHTML = "";
     document.getElementById('Cost_Cages').innerHTML = "";
