@@ -26,7 +26,7 @@ function vue_initial(e) {
 
 
         document.getElementById('title_Esc_Estime').innerHTML = "Number of Escalador needed";
-        
+
 
 
 
@@ -170,26 +170,26 @@ function calculated(e) {
     var NbCageEstimate = Number(document.getElementById('NbrEscEstimed').value = 0);
     /* testing the correct input */
     if (NbAppart < 0 || isNaN(parseInt(document.getElementById('NbAppart').value))) {
-        document.getElementById('NbAppart').value=null;
+        document.getElementById('NbAppart').value = null;
 
     }
-    if (NbEtage < 0 || isNaN(parseInt(document.getElementById('NbEtage').value)) ) {
-        document.getElementById('NbEtage').value=null;
+    if (NbEtage < 0 || isNaN(parseInt(document.getElementById('NbEtage').value))) {
+        document.getElementById('NbEtage').value = null;
     }
-    if (NbSsol < 0 || isNaN(parseInt(document.getElementById('NbSsol').value))){
-        document.getElementById('NbSsol').value=null;
+    if (NbSsol < 0 || isNaN(parseInt(document.getElementById('NbSsol').value))) {
+        document.getElementById('NbSsol').value = null;
     }
-    if (NbPlStD < 0 || isNaN(parseInt(document.getElementById('NbPlStD').value))){
-        document.getElementById('NbPlStD').value=null;
+    if (NbPlStD < 0 || isNaN(parseInt(document.getElementById('NbPlStD').value))) {
+        document.getElementById('NbPlStD').value = null;
     }
-    if (NbCageDem < 0 || isNaN(parseInt(document.getElementById('NbCageDem').value))){
-        document.getElementById('NbCageDem').value=null;
+    if (NbCageDem < 0 || isNaN(parseInt(document.getElementById('NbCageDem').value))) {
+        document.getElementById('NbCageDem').value = null;
     }
-    if (NbOccParEt < 0 || isNaN(parseInt(document.getElementById('NbOccParEt').value))){
-        document.getElementById('NbOccParEt').value=null;
+    if (NbOccParEt < 0 || isNaN(parseInt(document.getElementById('NbOccParEt').value))) {
+        document.getElementById('NbOccParEt').value = null;
     }
-    if (NbHrAcMax < 0 || NbHrAcMax >24 || isNaN(parseInt(document.getElementById('NbHrAcMax').value))){
-        document.getElementById('NbHrAcMax').value=null;
+    if (NbHrAcMax < 0 || NbHrAcMax > 24 || isNaN(parseInt(document.getElementById('NbHrAcMax').value))) {
+        document.getElementById('NbHrAcMax').value = null;
     }
     /* depend type of building we applicate the differenr calcul */
     if (e == '0') {
@@ -197,10 +197,10 @@ function calculated(e) {
         NbEscByApparts = Math.ceil(MoyAppartByEt / 6);
         NbCol = Math.ceil(NbEtage / 20);
         NbCageEstimate = NbEscByApparts * NbCol;
-        if (isNaN(NbCageEstimate) || NbCageEstimate==0){
-            document.getElementById('NbrEscEstimed').value = "";   
-        
-        }else {document.getElementById('NbrEscEstimed').value = NbCageEstimate;}
+        if (isNaN(NbCageEstimate) || NbCageEstimate == 0) {
+            document.getElementById('NbrEscEstimed').value = "";
+
+        } else { document.getElementById('NbrEscEstimed').value = NbCageEstimate; }
 
         /* vue d estimation escaladeur number we need */
 
@@ -209,10 +209,10 @@ function calculated(e) {
     }
     if (e == '1') {
         NbCageEstimate = NbCageDem;
-        if (isNaN(NbCageEstimate) ){
-            document.getElementById('NbrEscEstimed').value = "";   
-        
-        }else {document.getElementById('NbrEscEstimed').value = NbCageEstimate;}
+        if (isNaN(NbCageEstimate)) {
+            document.getElementById('NbrEscEstimed').value = "";
+
+        } else { document.getElementById('NbrEscEstimed').value = NbCageEstimate; }
         /*calculated_Project(NbCageEstimate);*/
     }
     if (e == '2') {
@@ -222,10 +222,10 @@ function calculated(e) {
         NbrEscCol = Math.ceil(NbrEsc / NbCol);
         NbCageEstimate = Math.ceil(NbrEscCol * NbrEscCol);
         document.getElementById('title_Esc_Estime').innerHTML = "Number of Escalators Needed";
-        if (isNaN(NbCageEstimate) ){
-            document.getElementById('NbrEscEstimed').value = "";   
-        
-        }else {document.getElementById('NbrEscEstimed').value = NbCageEstimate;}
+        if (isNaN(NbCageEstimate)) {
+            document.getElementById('NbrEscEstimed').value = "";
+
+        } else { document.getElementById('NbrEscEstimed').value = NbCageEstimate; }
 
     }
     if (e == '3') {
@@ -235,10 +235,10 @@ function calculated(e) {
         NbrEscCol = Math.ceil(NbrEsc / NbCol);
         NbCageEstimate = Math.ceil(NbrEscCol * NbrEscCol);
         document.getElementById('title_Esc_Estime').innerHTML = "Number of Escalators Needed";
-        if (isNaN(NbCageEstimate) ){
-            document.getElementById('NbrEscEstimed').value = "";   
-        
-        }else {document.getElementById('NbrEscEstimed').value = NbCageEstimate;}
+        if (isNaN(NbCageEstimate)) {
+            document.getElementById('NbrEscEstimed').value = "";
+
+        } else { document.getElementById('NbrEscEstimed').value = NbCageEstimate; }
 
 
     }
@@ -306,14 +306,14 @@ function vue_Project() {
         document.getElementById("stand-cost").style.display = "none";
         document.getElementById("prem-cost").style.display = "block";
         document.getElementById("excel-cost").style.display = "none";
-        
+
 
         document.getElementById('title_P').innerHTML = "TOTAL PROJECT COST";
         document.getElementById('Cost_Cages').innerHTML = "Elevators  $" + CostCages.toFixed(2);
         document.getElementById('Cost_Inst').innerHTML = "Installation  $" + CostInst.toFixed(2);
         document.getElementById('Cost_P').innerHTML = "TOTAL  $" + CostProj.toFixed(2);
     }
-    else if (radio[2].checked && NbCageEstimate > 0 ) {
+    else if (radio[2].checked && NbCageEstimate > 0) {
         CostCages = NbCageEstimate * radio[2].value;
         CostInst = CostCages * 0.1;
         CostProj = CostCages + CostInst;
@@ -322,7 +322,7 @@ function vue_Project() {
         document.getElementById("stand-cost").style.display = "none";
         document.getElementById("prem-cost").style.display = "none";
         document.getElementById("excel-cost").style.display = "block";
-        
+
 
         document.getElementById('title_P').innerHTML = "TOTAL PROJECT COST";
         document.getElementById('Cost_Cages').innerHTML = "Elevators  $" + CostCages.toFixed(2);
