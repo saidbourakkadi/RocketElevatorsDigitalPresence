@@ -301,6 +301,7 @@ function vue_Project() {
 
     if (radio[0].checked && NbCageEstimate > 0) {
         CostCages = NbCageEstimate * radio[0].value;
+        
         CostInst = CostCages * 0.1;
         CostProj = CostCages + CostInst;
         document.getElementById("pu").style.display = "block";
@@ -315,7 +316,8 @@ function vue_Project() {
     }
     else if (radio[1].checked && NbCageEstimate > 0) {
         CostCages = NbCageEstimate * radio[1].value;
-        CostInst = CostCages * 0.1;
+       
+        CostInst = CostCages * 0.13;
         CostProj = CostCages + CostInst;
         document.getElementById("pu").style.display = "block";
         document.getElementById("stand-cost").style.display = "none";
@@ -330,7 +332,8 @@ function vue_Project() {
     }
     else if (radio[2].checked && NbCageEstimate > 0) {
         CostCages = NbCageEstimate * radio[2].value;
-        CostInst = CostCages * 0.1;
+       
+        CostInst = CostCages * 0.16;
         CostProj = CostCages + CostInst;
 
         document.getElementById("pu").style.display = "block";
